@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Fashion-MNIST data
+module_1/data/
+module_1/data/FashionMNIST/
+*.gz
+*ubyte
+
+# PyTorch model files
+*.pth
+*.pt
+
+# VS Code
+.vscode/
