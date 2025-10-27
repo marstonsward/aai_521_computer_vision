@@ -8,7 +8,7 @@ The course consists of **7 modules** and **1 final project**, covering fundament
 
 ### Modules
 
-- **Module 1**: [Introduction to Computer Vision]
+- **Module 1**: [Image Processing and Neural Networks]
 - **Module 2**: [TBD]
 - **Module 3**: [TBD]
 - **Module 4**: [TBD]
