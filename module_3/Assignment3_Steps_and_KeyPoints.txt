@@ -1,0 +1,257 @@
+ASSIGNMENT 3 - OBJECT DETECTION AND SEGMENTATION
+NECESSARY STEPS AND KEY POINTS FOR COMPLETION
+
+==============================================================================
+PART 1 - OBJECT SEGMENTATION
+==============================================================================
+
+OBJECTIVE: Work with oxford_iiit dataset for image segmentation
+
+STEPS:
+1. Load the oxford_iiit dataset from TensorFlow
+   - Import necessary libraries (tensorflow, matplotlib, numpy)
+   - Load dataset using tf.keras.datasets or tf.data
+   
+2. Prepare first 3 samples
+   - Extract first 3 images from the dataset
+   - Resize images to 128x128 pixels
+   - Normalize pixel values if needed
+   
+3. Create segmentation masks
+   - Generate segmentation masks for the 3 samples
+   - Use appropriate segmentation techniques or pre-trained models
+   
+4. Display results
+   - Show original images alongside their segmented versions
+   - Use matplotlib for visualization
+   - Ensure proper labeling and formatting
+
+KEY POINTS:
+- Focus on image preprocessing (resize to 128x128)
+- Understand segmentation vs classification
+- Visual presentation is important
+- This connects to Lab 3.1 for model design
+
+==============================================================================
+PART 2 - ANNOTATION
+==============================================================================
+
+OBJECTIVE: Understand image annotation for object detection datasets
+
+PRELIMINARY SETUP:
+1. Download raccoon dataset from: https://github.com/experiencor/raccoon_dataset
+   - Clone or download the repository
+   - Examine dataset structure
+   - Understand annotation format (likely XML or JSON)
+
+STEPS:
+1. Display sample images
+   - Load and show several sample images from the raccoon dataset
+   - Use matplotlib for visualization
+   - Observe image characteristics and objects present
+
+2. Work with annotation class
+   - Use the provided class functions for mask and image creation
+   - Understand how annotations translate to masks
+   - Create sample image-mask pairs
+   - Display both original image and corresponding mask
+
+KEY POINTS:
+- Annotations are crucial for supervised learning
+- Understand bounding boxes, segmentation masks
+- Learn different annotation formats (COCO, PASCAL VOC, etc.)
+- Quality of annotations directly affects model performance
+
+==============================================================================
+PART 3 - YOLO (You Only Look Once)
+==============================================================================
+
+OBJECTIVE: Hands-on experience with YOLOv11 for object detection
+
+BACKGROUND KNOWLEDGE:
+- YOLO performs detection and classification in single network pass
+- YOLOv11 improvements: removes NMS, optimized architecture
+- Real-time detection capabilities
+- State-of-the-art accuracy-latency trade-offs
+
+PART 3A - CUSTOM ANNOTATION TOOL:
+1. Use annotation_tool.html
+   - Open the HTML file in a web browser
+   - Upload an image of your choice
+   - Practice creating bounding box annotations
+   - Assign proper class labels
+   - Save annotations in appropriate format
+
+PART 3B - YOLO SETUP:
+1. Install Ultralytics package
+   - pip install ultralytics
+   - Check dependencies and requirements
+   - Follow GitHub instructions: https://github.com/ultralytics/ultralytics
+
+2. Load pre-trained models
+   - Import necessary libraries
+   - Set working directory: HOME = os.getcwd()
+   - Load YOLOv11 weights
+   - Verify model loading successful
+
+PART 3C - TEST MODEL OUT-OF-BOX:
+1. Download test image
+   - Use image from: https://ultralytics.com/images/bus.jpg
+   - Apply YOLOv11 detection
+   - Run inference on the image
+
+2. Display results
+   - Load predicted results from "/content/bus.jpg"
+   - Show original vs predicted image
+   - Analyze detected objects and confidence scores
+
+PART 3D - MODEL FINE-TUNING:
+1. Prepare for training
+   - Obtain african-wildlife.yaml dataset configuration
+   - Set training parameters: 10 epochs, 32 batch size
+   - Ensure sufficient computational resources
+
+2. Train the model
+   - Execute training command with specified parameters
+   - Monitor training progress
+   - Handle any memory or computational issues
+
+3. Analyze training results
+   - Navigate to runs/detect/train folder
+   - Locate confusion matrix (.png file)
+   - Locate learning curves (.png file)
+   - Load and display both plots
+
+PART 3E - ANALYSIS AND EXPLANATION:
+1. Learning Curves Analysis
+   - Examine training vs validation loss
+   - Look for overfitting/underfitting signs
+   - Assess convergence behavior
+   - Comment on training stability
+
+2. Confusion Matrix Analysis
+   - Identify well-detected vs poorly-detected classes
+   - Analyze classification accuracy per class
+   - Identify common misclassifications
+   - Suggest potential improvements
+
+==============================================================================
+TECHNICAL REQUIREMENTS AND DEPENDENCIES
+==============================================================================
+
+REQUIRED LIBRARIES:
+- tensorflow / tensorflow-datasets
+- matplotlib
+- numpy
+- opencv-python (cv2)
+- ultralytics
+- pandas
+- seaborn (for visualization)
+- Pillow (PIL)
+
+COMPUTATIONAL REQUIREMENTS:
+- GPU recommended for YOLO training (Part 3D)
+- Sufficient RAM for image processing
+- Disk space for datasets and model weights
+
+DATASETS NEEDED:
+1. oxford_iiit (from TensorFlow)
+2. Raccoon dataset (GitHub: experiencor/raccoon_dataset)
+3. African wildlife dataset (african-wildlife.yaml)
+4. Bus image (https://ultralytics.com/images/bus.jpg)
+
+==============================================================================
+DELIVERABLES CHECKLIST
+==============================================================================
+
+PART 1:
+□ Code to load oxford_iiit dataset
+□ 3 sample images resized to 128x128
+□ Segmentation masks for the 3 samples
+□ Side-by-side visualization of images and masks
+
+PART 2:
+□ Sample images from raccoon dataset
+□ Implementation using provided annotation class
+□ Generated image-mask pairs
+□ Clear visualization of annotations
+
+PART 3:
+□ Custom annotation using annotation_tool.html
+□ YOLOv11 installation and setup code
+□ Out-of-box detection on bus image
+□ Training results on african-wildlife dataset
+□ Confusion matrix plot
+□ Learning curves plot
+□ Written analysis of results
+
+==============================================================================
+COMMON PITFALLS AND TIPS
+==============================================================================
+
+GENERAL TIPS:
+- Always verify image dimensions and formats
+- Handle different image channels (RGB vs BGR)
+- Normalize pixel values consistently
+- Save intermediate results for debugging
+- Document code with clear comments
+
+PART 1 SPECIFIC:
+- Ensure proper image resizing maintains aspect ratio
+- Verify segmentation mask alignment with original images
+- Use appropriate color maps for mask visualization
+
+PART 2 SPECIFIC:
+- Understand annotation format before processing
+- Verify bounding box coordinates are correct
+- Handle different image sizes in the dataset
+
+PART 3 SPECIFIC:
+- Ensure sufficient disk space for model weights
+- Monitor GPU memory usage during training
+- Save training checkpoints for long training sessions
+- Verify dataset format matches YOLO expectations
+
+==============================================================================
+EVALUATION CRITERIA
+==============================================================================
+
+TECHNICAL IMPLEMENTATION (60%):
+- Correct dataset loading and preprocessing
+- Proper segmentation mask generation
+- Successful YOLO setup and training
+- Accurate result visualization
+
+CODE QUALITY (20%):
+- Clean, well-commented code
+- Proper error handling
+- Efficient implementation
+- Good programming practices
+
+ANALYSIS AND UNDERSTANDING (20%):
+- Insightful analysis of learning curves
+- Thoughtful confusion matrix interpretation
+- Understanding of object detection concepts
+- Quality of written explanations
+
+==============================================================================
+RESOURCES AND REFERENCES
+==============================================================================
+
+DOCUMENTATION:
+- TensorFlow Datasets: https://www.tensorflow.org/datasets
+- Ultralytics YOLOv11: https://github.com/ultralytics/ultralytics
+- OpenCV Documentation: https://docs.opencv.org/
+- Matplotlib Gallery: https://matplotlib.org/stable/gallery/
+
+DATASETS:
+- Raccoon Dataset: https://github.com/experiencor/raccoon_dataset
+- COCO Dataset: https://cocodataset.org/
+- Oxford-IIIT Pet Dataset: https://www.robots.ox.ac.uk/~vgg/data/pets/
+
+RESEARCH PAPERS:
+- YOLO Original Paper: "You Only Look Once: Unified, Real-Time Object Detection"
+- YOLOv11 Improvements and Architecture Details
+- Object Detection Survey Papers
+
+==============================================================================
