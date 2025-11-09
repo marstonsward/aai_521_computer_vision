@@ -27,6 +27,8 @@ module_1/data/FashionMNIST/
 # Image files
 module_3/oxford_pet_manual/images/
 module_3/oxford_pet_manual/annotations/
+module_3/yolo_oxford_pets/
+module_3/yolo_training/
 *.png
 *.jpg
 *.jpeg
