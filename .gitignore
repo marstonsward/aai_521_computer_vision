@@ -23,3 +23,15 @@ module_1/data/FashionMNIST/
 
 # VS Code
 .vscode/
+
+# Image files
+module_3/oxford_pet_manual/images/
+module_3/oxford_pet_manual/annotations/
+*.png
+*.jpg
+*.jpeg
+*.bmp
+*.tiff
+*.gif
+*.xml
+*.mat
