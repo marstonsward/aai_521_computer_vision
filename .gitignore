@@ -29,6 +29,7 @@ module_3/oxford_pet_manual/images/
 module_3/oxford_pet_manual/annotations/
 module_3/yolo_oxford_pets/
 module_3/yolo_training/
+module_3/raccoon_dataset/
 *.png
 *.jpg
 *.jpeg
