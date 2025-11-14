@@ -1,0 +1,100 @@
+  
+ 
+    
+ 
+   
+ 
+          
+ 
+   
+ 
+ 
+  
+     
+  
+  
+ 
+        
+      
+  
+     
+ 0 Image in Gray 
+200 
+400 
+600 
+800 
+1000 
+0 250 500 750 0 
+200 
+400 
+600 
+800 
+000 
+1000 0 Image in RGB 
+250 500 750 1000 1.& 
+Unive~t~ 
+oJSan Diego· 
+Assignment 4.1 Feature Extraction Exercise 
+Part 1 -Feature Extraction 
+Start with reading the image shared with on BB (pic1 ©thispersondoesnotexist). Read the image 
+using OpenCV and create two versions of it. One colorful and one gray-scaled one. Store the 
+Gray scaled image as “pic1_gray.jpg”. We need this image down the road. 
+Hint: By default the image may be loaded as BGR and you have to modify it to make it RGB 
+a) SIFT: In 2004 , David Lowe introduced Scale -Invariant  Feature transform as a method for 
+extracting distinctive invariant features from images. The idea was feature matching between 
+images. The biggest advantage of the method is detect ing image features irrespective of 
+orientation and size. For this part, please provide the SIFT using OpenCV on colorful image. 
+Create two outputs one with sizing and one without it. 
+b) FAST: In 2006, Edward Rosten and Tom Drummond proposed “Features from accelerated 
+segment test ” (FAST) which is a corner detection method to extract feature points. This is 
+especially popular in real-time video processing. OpenCV allows you to create this with or without 
+suppression. Create two outputs one with max suppression and one without it. 
+1 
+        
+  
+    
+ 
+       
+     
+ 
+   
+  
+    
+  
+    
+ 
+             
+       
+ 
+  
+   
+ 
+    
+    
+    
+       
+   
+ c)ORB: Oriented FAST and Rotated BRIEF (ORB) was originally proposed by Ethan Rublee, 
+Vincent Rabaud, Kurt Konolige, and Gary R. Bradski in 2011 (OpenCV Labs). The biggest 
+advantage of this method is its robustness to distortion and noise. 
+d) One of the aspects of using feature extraction in OpenCV is to find feature matching between 
+two images. Use this ability to make comparisons between the colorful and gray image. Print the 
+number of matching points. 
+Part 2 -Face Recognition 
+For this part, we want to see how computer vision can help with face recognition (face detection). 
+Start with downloading the image of Assignment_pic2.jpg file ( ©unsplash.com -a free resource of 
+images). We need to start with Haar feature detection concept and use Haar cascading 
+procedure. You can get more information about haar cascading here. Download the required .xml 
+files from assignment package. 
+Note: Using cv2.imshow is a tool for showing images in Python. However, this command makes 
+crashes in Google colab. Instead use cv2_imshow . You need to call the package using: from 
+google.colab.patches import cv2_imshow 
+a)Apply the face and eye detection algorithm on the provided image. 
+b)Connect your own webcam and see how accurately this can detect you in the image. To make 
+it more challenging, you can bring in other people, animals, objects,.. in screen. 
+Part 3 -Parameter Detection 
+For th e last part of the assignment, create a model that can count the number of apples in the 
+image provided in Canvas (‘apple.jpg’). For more information about the procedure, reference 
+your Practical Machine Learning for Computer Vision (Laks hmanan, 2021) textbook . Your 
+model should print the proper number of apples on the image. 
+2 
