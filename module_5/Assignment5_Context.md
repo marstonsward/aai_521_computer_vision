@@ -16,7 +16,10 @@ c) Let’s apply some filters on the video file. Use adaptive_theshold_mean and 
 
 ## Part 2 - Pose estimation in video
 
-Return to the functions that were provided in previous assignments to estimate the pose in images. This time, we want to experience it in a video file. For that, we will follow the approach in <https://github.com/tensorflow/hub/tree/master/examples> and estimate the pose of the girl in video. The format of the video this time is gif.
+Return to the functions that were provided in previous assignments to estimate the pose in images. This time, we want to experience it in a video file. For that, we will use **MediaPipe Pose** (PyTorch-compatible alternative to TensorFlow Hub's MoveNet) and estimate the pose of the girl in video. The format of the video this time is gif.
+
+**Installation**: `pip install mediapipe opencv-python`
+**Reference**: <https://google.github.io/mediapipe/solutions/pose>
 
 ## Part 3 - Using webcam video
 
