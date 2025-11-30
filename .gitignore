@@ -37,4 +37,6 @@ module_3/raccoon_dataset/
 *.tiff
 *.gif
 *.xml
-*.mat
+*.mat# pixi environments
+.pixi/*
+!.pixi/config.toml

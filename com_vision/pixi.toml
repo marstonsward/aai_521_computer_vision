@@ -1,0 +1,12 @@
+[workspace]
+authors = ["Marston Ward <marston.s.ward@gmail.com>"]
+channels = ["conda-forge"]
+name = "com_vision"
+platforms = ["osx-arm64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+jupyterlab = ">=4.5.0,<5"
+pytorch = ">=2.9.1,<3"
